@@ -5,7 +5,7 @@ from constantes import *
 
 class Fondo():
     def __init__(self):
-        self.imagen = pygame.image.load("Imagen y sonido\Game_background.png").convert()
+        self.imagen = pygame.image.load("data\Game_background.png").convert()
         self.ALTO_FONDO = 800 
         self.fondo_1_coord_y = -100
         self.fondo_2_coord_y = self.fondo_1_coord_y - self.ALTO_FONDO
@@ -41,7 +41,7 @@ class Jugador(pygame.sprite.Sprite):
         self.coord_y = 560
         self.speed_x = 0
         self.speed_y = 0
-        self.image = pygame.image.load("Imagen y sonido\Jugador.png").convert_alpha()
+        self.image = pygame.image.load("data\Jugador.png").convert_alpha()
         self.rect = self.image.get_rect()
         self.hitbox = pygame.Rect(self.coord_x + 9, self.coord_y + 2, self.rect.width*0.775, self.rect.height*0.965)
 
@@ -72,7 +72,7 @@ class Auto_enemigo(pygame.sprite.Sprite):
         self.coord_y = coord_y
         self.speed_y_org = speed_y
         self.speed_y = speed_y
-        self.image = pygame.image.load(f"Imagen y sonido\{imagen}").convert_alpha()
+        self.image = pygame.image.load(f"data\{imagen}").convert_alpha()
         self.rect = self.image.get_rect()
         self.hitbox = pygame.Rect(self.coord_x + 8.5, self.coord_y + 2, self.rect.width*0.792, self.rect.height*0.96)
 

@@ -16,7 +16,7 @@ pygame.mouse.set_visible(False)
 clock = pygame.time.Clock()
 
 # -------------------------- MUSICA ----------------------------
-pygame.mixer.music.load("imagen y sonido\Musica.wav")
+pygame.mixer.music.load("data\Musica.wav")
 pygame.mixer.music.play(-1)
 
 # ------------------ VARIABLES DEL JUEGO -------------------------
@@ -127,8 +127,8 @@ while True:
         if enemigo.hitbox.colliderect(jugador.hitbox):
             
             # Muestro la explosion en lugar del jugador:
-            pygame.mixer.Sound("imagen y sonido\Explosion_sfx.wav").play()
-            jugador.image = pygame.image.load("Imagen y sonido\Explosion.png").convert_alpha()
+            pygame.mixer.Sound("data\Explosion_sfx.wav").play()
+            jugador.image = pygame.image.load("data\Explosion.png").convert_alpha()
             jugador.coord_x = jugador.coord_x - 15
             fondo.movimiento(pantalla)   
             impresion_sprites(pantalla, lista_todos_los_sprites)
